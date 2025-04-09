@@ -1,4 +1,5 @@
 import AddCompanyButton from './components/add-company-button';
+import MagicButton from './components/magic-button';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <StatusLabel status={Status.Suspended}>Suspended</StatusLabel> */}
 
       <AddCompanyButton />
+      <MagicButton />
     </main>
   );
 }
