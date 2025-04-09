@@ -1,7 +1,6 @@
 import React from 'react';
 
-export interface PageProps {}
-const Page = ({}: PageProps) => {
+const Page = () => {
   return (
     <main>
       <h1 className="text-xl">Dashboard Page</h1>

@@ -7,8 +7,7 @@ import CompanyTable from '../../components/company-table';
 import ComponyRow from '../../components/company-row';
 import { Status } from '../../components/status-label';
 
-export interface PageProps {}
-const Page = ({}: PageProps) => {
+const Page = () => {
   return (
     <>
       <Header>Companies</Header>
