@@ -1,12 +1,12 @@
-import MagicButton from '@/app/components/magic-button';
+import Header from '@/app/components/header';
+
 import React from 'react';
 
 const Page = () => {
   return (
-    <main>
-      <h1 className="text-xl">Dashboard Page</h1>
-      <MagicButton />
-    </main>
+    <>
+      <Header>Dashboard</Header>
+    </>
   );
 };
 
