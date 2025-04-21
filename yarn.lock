@@ -2246,18 +2246,6 @@ lru-cache@^10.2.0:
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
-markdown-tree@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-tree/-/markdown-tree-0.0.0.tgz#8d2df387f135fc14ed5871eeb7cd5c9dc919e443"
-  integrity sha512-bI1RkpK6g68ulyRbtpTmn8XBtLMOfIDPbpKG28t7j3Ugik4Dq0mKMtVtjSi7enu2VK0/CQnIOovyS4O/kk8klQ==
-  dependencies:
-    marked "~0.2.10"
-
-marked@~0.2.10:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.2.10.tgz#d5fd68271caae61c55d291d07bd5034cff5e73ee"
-  integrity sha512-LyFB4QvdBaJFfEIn33plrxtBuRjeHoDE2QJdP58i2EWMUTpa6GK6MnjJh3muCvVibFJompyr6IxecK2fjp4RDw==
-
 math-intrinsics@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz"

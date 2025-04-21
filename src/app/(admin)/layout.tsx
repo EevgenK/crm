@@ -5,7 +5,6 @@ export interface LayoutProps {
   children: React.ReactNode;
 }
 const Layout = ({ children }: LayoutProps) => {
-  console.log('rendering');
   return (
     <>
       <SideBar />

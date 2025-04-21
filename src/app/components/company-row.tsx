@@ -2,8 +2,9 @@ import React from 'react';
 import StatusLabel, { Status } from './status-label';
 import Image from 'next/image';
 import clsx from 'clsx';
+import { formattedDate } from '@/lib/formattedDate';
 
-export interface ComponyRowProps {
+export interface CompanyRowProps {
   id: number;
   category: string;
   company: string;
@@ -18,7 +19,7 @@ const labelByStatus = {
   [Status.Pending]: 'Pending',
   [Status.Suspended]: 'Suspended',
 };
-const ComponyRow = ({
+const CompanyRow = ({
   id,
   category,
   company,
@@ -26,7 +27,7 @@ const ComponyRow = ({
   promotion,
   country,
   joinedDate,
-}: ComponyRowProps) => {
+}: CompanyRowProps) => {
   return (
     <tr className="h-14 text-center text-gray-900 bg-white">
       <td className="text-xs font-medium text-blue-700 rounded-l border-l-4 border-blue-700">
@@ -57,11 +58,9 @@ const ComponyRow = ({
         </div>
       </td>
       <td>{country}</td>
-      <td className="rounded-r">
-        {new Date(joinedDate).toLocaleDateString('uk-UA')}
-      </td>
+      <td className="rounded-r">{formattedDate(joinedDate)}</td>
     </tr>
   );
 };
 
-export default ComponyRow;
+export default CompanyRow;
