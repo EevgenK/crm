@@ -5,8 +5,8 @@ import DashboardCard from '@/app/components/dashboard-card';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableHeader from '@/app/components/summary-table-header';
 import SummaryTableCell from '@/app/components/summary-table-cell';
-import MagicButton from '@/app/components/magic-button';
-import { getAsyncDataWithDelay } from '@/lib/getAsyncDataWithDelay';
+
+import { getAsyncDataWithDelay } from '@/lib/utils/getAsyncDataWithDelay';
 
 export default async function Page() {
   const data = await getAsyncDataWithDelay(getSummarySales, 4000);

@@ -2,7 +2,7 @@ import React from 'react';
 import StatusLabel, { Status } from './status-label';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { formattedDate } from '@/lib/formattedDate';
+import { formattedDate } from '@/lib/utils/formattedDate';
 
 export interface CompanyRowProps {
   id: number;

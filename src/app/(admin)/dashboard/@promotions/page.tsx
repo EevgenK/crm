@@ -1,14 +1,14 @@
 import React from 'react';
-import { getSummaryPromotions } from '@/lib/api';
+import { getPromotions } from '@/lib/api';
 
 import DashboardCard from '@/app/components/dashboard-card';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableHeader from '@/app/components/summary-table-header';
 import SummaryTableCell from '@/app/components/summary-table-cell';
-import { getAsyncDataWithDelay } from '@/lib/getAsyncDataWithDelay';
+import { getAsyncDataWithDelay } from '@/lib/utils/getAsyncDataWithDelay';
 
 export default async function Page() {
-  const data = await getAsyncDataWithDelay(getSummaryPromotions, 2500);
+  const data = await getAsyncDataWithDelay(getPromotions, 2500);
 
   return (
     <DashboardCard label="Promotions">
@@ -21,11 +21,11 @@ export default async function Page() {
           </>
         }
       >
-        {data.map(({ promotionId, companyTitle, promotionName, discount }) => (
-          <tr key={promotionId}>
+        {data.map(({ id, title, companyTitle, discount }) => (
+          <tr key={id}>
             <SummaryTableCell>{companyTitle}</SummaryTableCell>
-            <SummaryTableCell align="center">{promotionName}</SummaryTableCell>
-            <SummaryTableCell align="center">{`${discount * -1} %`}</SummaryTableCell>
+            <SummaryTableCell align="center">{title}</SummaryTableCell>
+            <SummaryTableCell align="center">{`-${discount}%`}</SummaryTableCell>
           </tr>
         ))}
       </SummaryTable>
