@@ -41,7 +41,9 @@ export const getCategories = (init?: RequestInit) => {
 };
 
 export const getCompanies = (init?: RequestInit) => {
-  return sendRequest<ApiTypes.Company[]>(buildUrl('companies'), init);
+  return sendRequest<ApiTypes.Company[]>(buildUrl('companies'), init).then(
+    (data) => data.filter((el) => el.title.length > 1),
+  );
 };
 
 export const getCompany = (id: string, init?: RequestInit) => {
@@ -52,8 +54,9 @@ export const getPromotions = async (
   params: Record<string, string> = {},
   init?: RequestInit,
 ) => {
-  return sendRequest<ApiTypes.Promotion[]>(
+  const data = await sendRequest<ApiTypes.Promotion[]>(
     `${buildUrl('promotions')}?${stringifyQueryParams(params)}`,
     init,
   );
+  return data.filter((el) => el.title.length > 1);
 };

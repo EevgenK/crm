@@ -1,7 +1,6 @@
 import DashboardCard from '@/app/components/dashboard-card';
-import { getCompanies, getCountries, getSummaryCountries } from '@/lib/api';
+import { getCompanies, getCountries } from '@/lib/api';
 
-import { getAsyncDataWithDelay } from '@/lib/utils/getAsyncDataWithDelay';
 import getCountById from '@/lib/utils/getCountById';
 import clsx from 'clsx';
 import Image from 'next/image';
