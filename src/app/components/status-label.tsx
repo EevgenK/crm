@@ -5,14 +5,17 @@ import React from 'react';
 export interface StatusLabelProps {
   status: CompanyStatus;
   disabled?: boolean;
+  styled?: boolean;
 }
-const labelByStatus = {
+const labelByStatus: Record<CompanyStatus, string> = {
+  [CompanyStatus.Suspended]: 'Suspended',
   [CompanyStatus.Active]: 'Active',
   [CompanyStatus.NotActive]: 'Not Active',
   [CompanyStatus.Pending]: 'Pending',
-  [CompanyStatus.Suspended]: 'Suspended',
 };
-const StatusLabel = ({ status, disabled }: StatusLabelProps) => {
+const StatusLabel = ({ status, disabled, styled = true }: StatusLabelProps) => {
+  const label = labelByStatus[status];
+  if (!styled) return <>{label}</>;
   return (
     <div
       className={clsx(
@@ -27,7 +30,7 @@ const StatusLabel = ({ status, disabled }: StatusLabelProps) => {
       )}
     >
       <div className="w-1 h-1 mr-2 rounded-full bg-current" />
-      {labelByStatus[status]}
+      {label}
     </div>
   );
 };

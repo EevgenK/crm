@@ -9,7 +9,6 @@ const Page = () => {
   const router = useRouter();
   return (
     <Modal show={true} onClose={() => router.back()}>
-      <h2 className="text-orange-400">Hello from modal!</h2>
       <CompanyForm onSubmit={console.log} />
     </Modal>
   );

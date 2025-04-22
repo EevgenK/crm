@@ -60,3 +60,32 @@ export const getPromotions = async (
   );
   return data.filter((el) => el.title.length > 1);
 };
+
+export const createCompany = async (
+  data: Omit<ApiTypes.Company, 'id' | 'hasPromotions'>,
+  init?: RequestInit,
+) => {
+  return sendRequest<ApiTypes.Company>(buildUrl('companies'), {
+    ...init,
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      ...(init && init.headers),
+      'content-type': 'application/json',
+    },
+  });
+};
+
+export const createPromotion = async (
+  data: Omit<ApiTypes.Promotion, 'id'>,
+  init?: RequestInit,
+) => {
+  return sendRequest<ApiTypes.Promotion>(buildUrl('promotions'), {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      ...(init && init.headers),
+      'content-type': 'application/json',
+    },
+  });
+};

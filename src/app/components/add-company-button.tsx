@@ -10,7 +10,7 @@ const AddCompanyButton = () => {
   return (
     <Button
       onClick={() => {
-        router.push('/companies/new');
+        router.push('/companies/new', { scroll: false });
       }}
     >
       Add company
