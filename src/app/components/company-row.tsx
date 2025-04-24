@@ -4,7 +4,7 @@ import StatusLabel from '@/app/components/status-label';
 
 import Image from 'next/image';
 import clsx from 'clsx';
-import { formattedDate } from '@/lib/utils/formattedDate';
+
 import { Company } from '@/lib/api-types';
 
 export interface CompanyRowProps {
