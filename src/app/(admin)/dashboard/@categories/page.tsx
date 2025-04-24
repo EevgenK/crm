@@ -12,7 +12,7 @@ export default async function Page() {
   return (
     <DashboardCard label="Categories of companies">
       <div className="grid grid-cols-12 gap-3 pb-5 px-5">
-        {categories.map(({ id, title }) => (
+        {categories?.map(({ id, title }) => (
           <div key={id} className="col-span-3">
             <StatCard
               type={StatCardType.Dark}
