@@ -9,6 +9,7 @@ export interface SidebarItemProps {
   alt: string;
   children: React.ReactNode;
   current: boolean;
+  additionalClass?: string;
 }
 const SidebarItem = ({
   pathname,
@@ -16,6 +17,7 @@ const SidebarItem = ({
   alt,
   children,
   current,
+  additionalClass,
 }: SidebarItemProps) => {
   return (
     <li>
@@ -25,6 +27,7 @@ const SidebarItem = ({
           'flex items-center h-9 mx-1 gap-3.5',
           current &&
             'after:h-full after:ml-auto after:border-2 after:border-purple-200 after:rounded-sm',
+          additionalClass,
         )}
       >
         <Image className="ml-5" width={18} height={18} src={src} alt={alt} />

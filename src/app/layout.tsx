@@ -4,6 +4,12 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 
 const font = Plus_Jakarta_Sans({ subsets: ['latin'] });
+export const metadata = {
+  title: 'TruScape CRM',
+  icons: {
+    icon: '/icons/logo.svg',
+  },
+};
 
 const RootLayout = ({
   children,
